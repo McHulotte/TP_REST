@@ -128,3 +128,19 @@ Avant de créer mes scripts je teste d'abord en ligne de commande de publier sur
 mosquitto_pub -h 10.202.0.107 -t 'shellies/shellyplug-s-6A6534/relay/0/command' -m "toggle"
 ```
 
+J'ai donc modifié mes scripts afin de remplacer les commandes curl par des commandes sub et pub mqtt.
+
+Je l'ai ai ajouté à git puis ajouté le tag :
+
+```shell
+git tag -a partie_2 0a73d1297d0 -m "Fin de la partie 2"
+```
+
+---
+
+
+
+### **Partie 3 : Serveur REST**
+
+J'ai réussi à mettre en place la connexion nginx / php fpm (fast_CGI). Je suis content.
+
