@@ -7,12 +7,12 @@ fi
 
 case $1 in
 	0) 
-	mosquitto_sub -h 10.202.0.107 -t 'shellies/shellyplug-s-6A6534/relay/0';
+	mosquitto_sub -h 10.202.0.65 -t 'shellies/shellyplug-s-6A64DB/relay/0';
 	mosquitto_sub -h 10.202.0.107 -t 'shellies/shellyplug-s-6A6534/relay/0';
 	echo "\n"
 	;;
 	1) 
-	mosquitto_sub -h 10.202.0.107 -t 'shellies/shellyplug-s-6A6534/relay/0';
+	mosquitto_sub -h 10.202.0.65 -t 'shellies/shellyplug-s-6A64DB/relay/0';
 	echo "\n"
 	;;
 	2) 
