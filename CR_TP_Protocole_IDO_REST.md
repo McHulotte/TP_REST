@@ -6,7 +6,7 @@
 
 ---
 
-
+### **Partie 1 : Utiliser la méthode REST :**
 
 **1.** J'ai créé le dépôt GitHub sous McHulotte/TP_REST et invité le collaborateur SebDruon
 
@@ -99,4 +99,32 @@ Ce qui est très lourd pour un commande aussi simple que d'allumer ou éteindre 
 
 
 **7.**
+
+J'ajoute un tag à mon dernier commit :
+
+```shell
+git tag -a partie_1 655e159 -m "Fin de la partie 1"
+```
+
+---
+
+
+
+### **Partie 2 : MQTT**
+
+Tout d'abord pour retrouvé le modèle de la prise je me suis abonné à tous les modèle clients du broker (il y en a une seule donc la seule réponse sera le bon modèle) :
+
+```shell
+mosquitto_sub -h 10.202.0.107 -t 'shellies/+/relay/0'
+```
+
+En capturant la trame j'ai pu retrouver le modèle de la prise pour pouvoir m'abonné au bon topic :
+
+**shellyplug-s-6A6534**
+
+Avant de créer mes scripts je teste d'abord en ligne de commande de publier sur le topic pour toggle on/off la prise :
+
+```shell
+mosquitto_pub -h 10.202.0.107 -t 'shellies/shellyplug-s-6A6534/relay/0/command' -m "toggle"
+```
 
